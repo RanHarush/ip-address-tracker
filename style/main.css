@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1440px;
+  height: 100vh;
+  margin: auto;
+}
+.container .upper-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 25%;
+  background-image: url(../images/pattern-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.container .upper-div .upper-div-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+.container .upper-div .upper-div-wrapper p {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.container .upper-div .upper-div-wrapper .input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .upper-div .upper-div-wrapper .input-wrapper input {
+  width: 30%;
+  font-size: 1rem;
+  padding: 1em;
+  border-top-left-radius: 0.8em;
+  border-bottom-left-radius: 0.8em;
+  border: none;
+  outline: none;
+}
+.container .upper-div .upper-div-wrapper .input-wrapper input::-moz-placeholder {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 59%);
+}
+.container .upper-div .upper-div-wrapper .input-wrapper input:-ms-input-placeholder {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 59%);
+}
+.container .upper-div .upper-div-wrapper .input-wrapper input::placeholder {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 59%);
+}
+.container .upper-div .upper-div-wrapper .input-wrapper .arrow-div {
+  padding: 0.8em 1.1em;
+  border-top-right-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
+  background-color: black;
+  cursor: pointer;
+}
+.container .upper-div .upper-div-wrapper .input-wrapper .arrow-div:hover {
+  background-color: rgba(43, 43, 43, 0.9);
+}
+.container .upper-div .middle-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 3em;
+  position: absolute;
+  top: 100%;
+  transform: translate(0, -50%);
+  padding: 1.5em 2em;
+  background-color: white;
+  border-radius: 0.75em;
+  width: 80%;
+  z-index: 500;
+}
+.container .upper-div .middle-div .ip-address {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+.container .upper-div .middle-div .ip-address span {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.75em;
+  font-weight: 500;
+}
+.container .upper-div .middle-div .ip-address .ip-address-result {
+  color: hsl(0deg, 0%, 17%);
+  font-size: 1.5em;
+}
+.container .upper-div .middle-div .location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+  position: relative;
+}
+.container .upper-div .middle-div .location span {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.75em;
+  font-weight: 500;
+}
+.container .upper-div .middle-div .location .location-result {
+  color: hsl(0deg, 0%, 17%);
+  font-size: 1.5em;
+}
+.container .upper-div .middle-div .location::before {
+  content: "";
+  height: 100%;
+  border: 1px solid rgba(150, 150, 150, 0.3);
+  position: absolute;
+  left: -1.5em;
+}
+.container .upper-div .middle-div .location::after {
+  content: "";
+  height: 100%;
+  border: 1px solid rgba(150, 150, 150, 0.3);
+  position: absolute;
+  right: -1.5em;
+}
+.container .upper-div .middle-div .timezone {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+.container .upper-div .middle-div .timezone span {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.75em;
+  font-weight: 500;
+}
+.container .upper-div .middle-div .timezone .timezone-result {
+  color: hsl(0deg, 0%, 17%);
+  font-size: 1.5em;
+}
+.container .upper-div .middle-div .isp {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+  position: relative;
+}
+.container .upper-div .middle-div .isp span {
+  color: hsl(0deg, 0%, 59%);
+  font-size: 0.75em;
+  font-weight: 500;
+}
+.container .upper-div .middle-div .isp .isp-result {
+  color: hsl(0deg, 0%, 17%);
+  font-size: 1.5em;
+}
+.container .upper-div .middle-div .isp::before {
+  content: "";
+  height: 100%;
+  border: 1px solid rgba(150, 150, 150, 0.3);
+  position: absolute;
+  left: -1.5em;
+}
+.container .lower-div {
+  height: 50%;
+}
+.container .lower-div #map {
+  height: 100%;
+  position: relative;
+}
+.container .lower-div #map img {
+  z-index: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    overflow: hidden;
+  }
+  .container .upper-div {
+    height: 35%;
+  }
+  .container .upper-div .upper-div-wrapper p {
+    font-size: 1.7rem;
+  }
+  .container .upper-div .upper-div-wrapper .input-wrapper input {
+    width: 70%;
+  }
+  .container .upper-div .upper-div-wrapper .input-wrapper .arrow-div {
+    padding: 1em 1.3em;
+  }
+  .container .upper-div .middle-div {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5em;
+    width: 85%;
+  }
+  .container .upper-div .middle-div .ip-address span {
+    letter-spacing: 0.1em;
+  }
+  .container .upper-div .middle-div .ip-address .ip-address-result {
+    letter-spacing: 0;
+  }
+  .container .upper-div .middle-div .location span {
+    letter-spacing: 0.1em;
+  }
+  .container .upper-div .middle-div .location .location-result {
+    letter-spacing: 0;
+  }
+  .container .upper-div .middle-div .location::before {
+    display: none;
+  }
+  .container .upper-div .middle-div .location::after {
+    display: none;
+  }
+  .container .upper-div .middle-div .timezone span {
+    letter-spacing: 0.1em;
+  }
+  .container .upper-div .middle-div .timezone .timezone-result {
+    letter-spacing: 0;
+  }
+  .container .upper-div .middle-div .isp span {
+    letter-spacing: 0.1em;
+  }
+  .container .upper-div .middle-div .isp .isp-result {
+    letter-spacing: 0;
+  }
+  .container .upper-div .middle-div .isp::before {
+    display: none;
+  }
+  .container .lower-div {
+    height: 65%;
+  }
+  .container .lower-div #map img {
+    width: auto;
+  }
+}/*# sourceMappingURL=main.css.map */
